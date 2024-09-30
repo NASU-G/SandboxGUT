@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3ckm18ueu5h7"]
+
+[ext_resource type="Script" path="res://scenes/main_scene.gd" id="1_88ewy"]
+[ext_resource type="Script" path="res://scenes/display_label.gd" id="2_uxycc"]
+
+[node name="MainScene" type="Node"]
+script = ExtResource("1_88ewy")
+
+[node name="DisplayLabel1" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Label"
+script = ExtResource("2_uxycc")
+
+[node name="DisplayLabel2" type="Label" parent="."]
+offset_top = 62.0
+offset_right = 42.0
+offset_bottom = 85.0
+text = "Label"
+script = ExtResource("2_uxycc")
+
+[node name="DisplayLabel3" type="Label" parent="."]
+offset_top = 126.0
+offset_right = 42.0
+offset_bottom = 149.0
+text = "Label"
+script = ExtResource("2_uxycc")
+
+[node name="DisplayLabel4" type="Label" parent="."]
+offset_top = 193.0
+offset_right = 42.0
+offset_bottom = 216.0
+text = "Label"
+script = ExtResource("2_uxycc")
+
+[node name="DisplayLabel5" type="Label" parent="."]
+offset_top = 254.0
+offset_right = 42.0
+offset_bottom = 277.0
+text = "Label"
+script = ExtResource("2_uxycc")
+
+[connection signal="shouted_hello_everyone" from="." to="DisplayLabel1" method="_on_shouted_hello_everyone"]
+[connection signal="shouted_hello_everyone" from="." to="DisplayLabel2" method="_on_shouted_hello_everyone"]
+[connection signal="shouted_hello_everyone" from="." to="DisplayLabel3" method="_on_shouted_hello_everyone"]
+[connection signal="shouted_hello_everyone" from="." to="DisplayLabel4" method="_on_shouted_hello_everyone"]
+[connection signal="shouted_hello_everyone" from="." to="DisplayLabel5" method="_on_shouted_hello_everyone"]
