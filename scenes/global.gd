@@ -4,7 +4,7 @@ extends Node
 # @GlobalScope enum Error # https://docs.godotengine.org/ja/4.x/classes/class_@globalscope.html#enum-globalscope-error
 var error: Error = Error.FAILED
 
-const MAIN_SCENE_PATH = "res://scenes/main_scene/main_scene.tscn"
+const MAIN_SCENE_PATH = "res://scenes/main_scene.tscn"
 
 const MY_SLIDER_DEFAULT_VALUE = 0.2	# MyHSlider の初期値
 var my_slider_value: float = MY_SLIDER_DEFAULT_VALUE	# MyHSlider の現在値

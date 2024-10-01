@@ -4,6 +4,8 @@ extends HSlider
 
 
 func _ready() -> void:
+	#print_debug("ready")	#NOTE add_child() すれば、_ready() も呼んでもらえる！
+	
 	Global.warm_reset()
 	
 	update_my_label_text(Global.my_slider_value)
@@ -11,8 +13,8 @@ func _ready() -> void:
 
 
 # HSlider を操作したら呼ばれる
-func _on_value_changed(value: float) -> void:
-	update_my_label_text(value)
+func _on_value_changed(v: float) -> void:
+	update_my_label_text(v)
 
 
 # 指定値で、値と表示内容を更新する

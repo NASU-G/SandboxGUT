@@ -1,3 +1,4 @@
+# MainScene の、ユニットテスト(単体テスト)
 extends GutTest
 
 const MAIN_SCENE_PATH = "res://scenes/main_scene.tscn"

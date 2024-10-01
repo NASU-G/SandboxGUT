@@ -1,3 +1,4 @@
+# utility_script.gd の、ユニットテスト(単体テスト)
 extends GutTest
 
 const UTILITY_SCRIPT_PATH = "res://scenes/utility_script.gd"

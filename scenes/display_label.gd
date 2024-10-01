@@ -3,6 +3,8 @@ extends Label
 
 
 func _ready() -> void:
+	#print_debug("ready")	#NOTE add_child() すれば、_ready() も呼んでもらえる！
+	
 	Global.warm_reset()
 	
 	update_dispaly_text("The display label in main scene.")

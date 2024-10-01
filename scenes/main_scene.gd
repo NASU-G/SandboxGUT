@@ -11,7 +11,8 @@ signal shouted_hello_everyone	# 叫んでみたらどうなるのか ?
 
 
 func _ready() -> void:
-	print("ready")	# add_child() すれば、_ready() も呼んでもらえる！
+	#print_debug("ready")	#NOTE add_child() すれば、_ready() も呼んでもらえる！
+	
 	Global.warm_reset()
 
 
@@ -23,7 +24,7 @@ func _process(_delta: float) -> void:
 # signal を使って叫び、その内容を返す
 func shout(txt: String) -> String:
 	var result = txt + "!!!"
-	shouted_hello_everyone.emit(result)		# signal で叫びを表現し、事前に登録しておいた一連の処理たちに呼びかける
+	shouted_hello_everyone.emit(result)		# shouted_hello_everyone シグナルで叫びを表現し、事前に登録しておいた一連の処理たちに呼びかける
 	
 	return result
 
