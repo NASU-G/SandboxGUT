@@ -3,7 +3,6 @@ extends Node
 
 signal shouted_hello_everyone	# 叫んでみたらどうなるのか ?
 
-#TODO 仮
 @onready var display_label_1: DispalyLabel = $DisplayLabel1	# add_child() すれば、@onready 行も呼んでもらえる！
 @onready var display_label_2: DispalyLabel = $DisplayLabel2
 @onready var display_label_3: DispalyLabel = $DisplayLabel3

@@ -5,10 +5,10 @@ extends Label
 func _ready() -> void:
 	Global.warm_reset()
 	
-	text = "The display label in main scene."
+	update_dispaly_text("The display label in main scene.")
 
 
-# 叫ばれたとき、どうするか
+# shouted_hello_everyone で叫ばれたとき、どうするか
 func _on_shouted_hello_everyone(txt: String) -> void:
 	update_dispaly_text(str(randi()) + ": OK, " + txt)	# 応答内容をラベルの text で表現する
 
