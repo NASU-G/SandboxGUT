@@ -13,6 +13,7 @@ signal shouted_hello_everyone	# 叫んでみたらどうなるのか ?
 
 func _ready() -> void:
 	print("ready")	# add_child() すれば、_ready() も呼んでもらえる！
+	Global.warm_reset()
 
 
 func _process(_delta: float) -> void:

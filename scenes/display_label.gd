@@ -3,6 +3,8 @@ extends Label
 
 
 func _ready() -> void:
+	Global.warm_reset()
+	
 	text = "The display label in main scene."
 
 
