@@ -1,6 +1,6 @@
 extends HSlider
 
-@onready var my_label: Label = $MyLabel
+@onready var my_label: Label = $MyHSliderLabel
 
 
 func _ready() -> void:

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3ckm18ueu5h7"]
+[gd_scene load_steps=5 format=3 uid="uid://b3ckm18ueu5h7"]
 
 [ext_resource type="Script" path="res://scenes/main_scene.gd" id="1_3ac8c"]
 [ext_resource type="Script" path="res://scenes/my_h_slider.gd" id="2_j8sc4"]
 [ext_resource type="Script" path="res://scenes/display_label.gd" id="2_uxycc"]
+[ext_resource type="Script" path="res://scenes/my_hello_button.gd" id="4_k8r6d"]
 
 [node name="MainScene" type="Node"]
 script = ExtResource("1_3ac8c")
@@ -46,16 +47,34 @@ offset_left = 128.0
 offset_top = 352.0
 offset_right = 384.0
 offset_bottom = 384.0
+focus_neighbor_bottom = NodePath("../MyHelloButton")
 max_value = 1.0
 step = 0.1
 value = 0.2
 script = ExtResource("2_j8sc4")
 
-[node name="MyLabel" type="Label" parent="MyHSlider"]
+[node name="MyHSliderLabel" type="Label" parent="MyHSlider"]
 layout_mode = 0
 offset_top = -16.0
 offset_right = 64.0
 offset_bottom = 8.0
+text = "Label"
+
+[node name="MyHelloButton" type="Button" parent="."]
+offset_left = 169.0
+offset_top = 417.0
+offset_right = 335.0
+offset_bottom = 466.0
+focus_neighbor_top = NodePath("../MyHSlider")
+text = "Hello Button"
+script = ExtResource("4_k8r6d")
+
+[node name="MyHelloButtonLabel" type="Label" parent="MyHelloButton"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 65.0
+offset_right = 103.0
+offset_bottom = 88.0
 text = "Label"
 
 [connection signal="shouted_hello_everyone" from="." to="DisplayLabel1" method="_on_shouted_hello_everyone"]
@@ -64,3 +83,4 @@ text = "Label"
 [connection signal="shouted_hello_everyone" from="." to="DisplayLabel4" method="_on_shouted_hello_everyone"]
 [connection signal="shouted_hello_everyone" from="." to="DisplayLabel5" method="_on_shouted_hello_everyone"]
 [connection signal="value_changed" from="MyHSlider" to="MyHSlider" method="_on_value_changed"]
+[connection signal="button_down" from="MyHelloButton" to="MyHelloButton" method="_on_button_down"]
