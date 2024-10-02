@@ -6,8 +6,6 @@ extends HSlider
 func _ready() -> void:
 	#print_debug("ready")	#NOTE add_child() すれば、_ready() も呼んでもらえる！
 	
-	Global.warm_reset()
-	
 	update_my_label_text(Global.my_slider_value)
 	grab_focus.call_deferred()	# 入力フォーカスを MyHSlider に与える (キー入力が効く)
 
