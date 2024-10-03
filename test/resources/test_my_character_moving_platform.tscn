@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d35i0ptdjhc7e"]
+
+[ext_resource type="PackedScene" uid="uid://csrwygqyommh0" path="res://scenes/my_character.tscn" id="1_gptrc"]
+[ext_resource type="PackedScene" uid="uid://bip5tjccn541r" path="res://scenes/my_ground.tscn" id="2_hfqil"]
+
+[node name="TestMyCharacterMovingPlatform" type="Node"]
+
+[node name="MyCharacter" parent="." instance=ExtResource("1_gptrc")]
+position = Vector2(557, 310)
+
+[node name="MyGround" parent="." instance=ExtResource("2_hfqil")]
+position = Vector2(562, 521)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "This is my character moving platform scene."

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bip5tjccn541r"]
+
+[ext_resource type="Texture2D" uid="uid://vtcoo7qckvxd" path="res://icon.svg" id="1_lkiwi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfpcc"]
+size = Vector2(781.5, 60)
+
+[node name="MyGround" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.499985, 0.5)
+scale = Vector2(6.10156, 0.476563)
+texture = ExtResource("1_lkiwi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.2, 0.2, 0.8, 1)
+position = Vector2(0.75, 1)
+shape = SubResource("RectangleShape2D_lfpcc")
